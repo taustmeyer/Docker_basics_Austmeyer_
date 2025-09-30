@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  phiole:
+    image: yourimage/phiole:latest
+    container_name: phiole
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./config:/app/config
+    restart: unless-stopped
+
